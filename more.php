@@ -1,5 +1,5 @@
 <?php
-    $conn =mysqli_connect('localhost','ci18940_ustumsuu','Pronnya2022','ci18940_ustumsuu');
+    $conn = mysqli_connect('localhost','host1842928','s5KnbUFgGs','host1842928');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -51,17 +51,17 @@
                 </h2>
                 <div class="items__all">
                 <?php
-                    $query = "SELECT * FROM `items` ";
+                    $query = "SELECT * FROM `items`";
                     $result = mysqli_query($conn,$query);
                     while($row = mysqli_fetch_array($result)) {
                 ?>
 
                     <div class="item">
                         <div class="items__image__div">
-                            <img class="items__image" src="<? echo $row[1] ?>" alt="">
+                            <img class="items__image" src="<? echo $row[1]; ?>" alt="">
                         </div>
-                        <h1 class="items__title"><? echo $row[2] ?></h1>
-                        <p class="items__text"><? echo $row[3] ?></p>
+                        <h1 class="items__title"><? echo $row[2]; ?></h1>
+                        <p class="items__text"><? echo $row[3]; ?></p>
                     </div>
 
                 <?php
